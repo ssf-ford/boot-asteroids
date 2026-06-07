@@ -10,6 +10,9 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+    clock = pygame.time.Clock()
+    dt = 0.0
+
     # Game loop
     while True:
         log_state()
@@ -19,6 +22,9 @@ def main():
 
         screen.fill("black")
         pygame.display.flip()
+
+        dt = clock.tick(60) / 1000
+        # print(f"dt: {dt}")
 
 
 if __name__ == "__main__":
