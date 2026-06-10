@@ -138,7 +138,7 @@ def log_event(event_type: str, **details: object) -> None:
         "timestamp": now.strftime("%H:%M:%S.%f")[:-3],
         "elapsed_s": math.floor((now - _start_time).total_seconds()),
         "frame": _frame_count,
-        "event_type": event_type,
+        "type": event_type,
         **details,
     }
     mode = "w" if not _event_log_initialized else "a"
