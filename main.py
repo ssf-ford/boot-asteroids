@@ -52,7 +52,7 @@ def main():
             for s in shots:
                 if a.collide_with(s):
                     log_event("asteroid_shot")
-                    a.kill()
+                    a.split()
                     s.kill()
 
         pygame.display.flip()
